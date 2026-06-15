@@ -45,3 +45,13 @@ def creatWin() :
      cmds.button(l="Switch IK/FK Arm R", c = ArmR) 
 
      cmds.showWindow("Switch")
+
+# CopyRights :
+
+#Code made by CASTILLO Mattheo / mto_...
+#Contact :
+#gmail : castillo.mattheo@gmail.com
+#Special thanks to :
+
+#- Creajeux video game school and all of its students for beta testing these tools.
+#- Florian Delarque for helping about the code.

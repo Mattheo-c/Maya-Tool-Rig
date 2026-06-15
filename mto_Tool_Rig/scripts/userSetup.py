@@ -13,3 +13,13 @@ def startupCommands():
 
 cmds.evalDeferred("print('userSetup.py TEST.')")
 cmds.evalDeferred('startupCommands()')
+
+# CopyRights :
+
+#Code made by CASTILLO Mattheo / mto_...
+#Contact :
+#gmail : castillo.mattheo@gmail.com
+#Special thanks to :
+
+#- Creajeux video game school and all of its students for beta testing these tools.
+#- Florian Delarque for helping about the code.
