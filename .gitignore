@@ -2,3 +2,4 @@
 mnt_framework.mod
 mto_Tool_Rig/scripts/__pycache__
 .svn
+mto_Tool_Rig/scripts/rig_toolbox.py
