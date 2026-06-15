@@ -1,3 +1,13 @@
+# CopyRights :
+
+#Author: CASTILLO Mattheo 
+#Contact :
+#gmail : castillo.mattheo@gmail.com
+#Special thanks to :
+
+#- Creajeux video game school and all of its students for beta testing these tools.
+#- Florian Delarque for helping about the code.
+
 import maya.cmds as cmds
 import re
 #__________________________________________________________
@@ -1507,14 +1517,3 @@ def mirror(listeofname):
     for joint in listeofname :
      cmds.mirrorJoint(joint,searchReplace=('_L', '_R'))
      cmds.select(d=True)
-
-
-# CopyRights :
-
-#Code made by CASTILLO Mattheo / mto_...
-#Contact :
-#gmail : castillo.mattheo@gmail.com
-#Special thanks to :
-
-#- Creajeux video game school and all of its students for beta testing these tools.
-#- Florian Delarque for helping about the code.

@@ -1,3 +1,13 @@
+#CopyRights :
+
+#Author: CASTILLO Mattheo 
+#Contact :
+#gmail : castillo.mattheo@gmail.com
+#Special thanks to :
+
+#- Creajeux video game school and all of its students for beta testing these tools.
+#- Florian Delarque for helping about the code.
+
 import maya.cmds as cmds
 import mto_makingmenu as menu  
 import importlib
@@ -256,13 +266,3 @@ def DeleteFrame(*arg):
   frame=cmds.ls(type="animCurve")
   cmds.select(frame)
   cmds.delete()
-
-# CopyRights :
-
-#Code made by CASTILLO Mattheo / mto_...
-#Contact :
-#gmail : castillo.mattheo@gmail.com
-#Special thanks to :
-
-#- Creajeux video game school and all of its students for beta testing these tools.
-#- Florian Delarque for helping about the code.

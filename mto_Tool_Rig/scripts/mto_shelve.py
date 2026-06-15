@@ -1,3 +1,13 @@
+#CopyRights :
+
+#Author: CASTILLO Mattheo 
+#Contact :
+#gmail : castillo.mattheo@gmail.com
+#Special thanks to :
+
+#- Creajeux video game school and all of its students for beta testing these tools.
+#- Florian Delarque for helping about the code.
+
 import maya.cmds as cmds 
 import mto_IK_FK as mto_IKFK
 import mto_AutoRigbipede as mto_auto
@@ -56,13 +66,4 @@ class customShelf(shelf_base):
         self.addButton(label = '', icon = 'addSkinInfluence.png',enable = True,command = mto_auto.CreatWin, ann = 'Switch IK Fk Tool')
 
 
-# CopyRights :
-
-#Code made by CASTILLO Mattheo / mto_...
-#Contact :
-#gmail : castillo.mattheo@gmail.com
-#Special thanks to :
-
-#- Creajeux video game school and all of its students for beta testing these tools.
-#- Florian Delarque for helping about the code.
 
