@@ -11,6 +11,7 @@
 import maya.cmds as cmds 
 import mto_IK_FK as mto_IKFK
 import mto_AutoRigbipede as mto_auto
+import mto_switch_Anim as mto_Anim
 import importlib
 
 importlib.reload(mto_IKFK)
@@ -64,6 +65,12 @@ class customShelf(shelf_base):
         self.addSeparator()
 
         self.addButton(label = '', icon = 'addSkinInfluence.png',enable = True,command = mto_auto.CreatWin, ann = 'Switch IK Fk Tool')
+
+        self.addSeparator()
+
+        self.addButton(label = '', icon = 'swapBG.png',enable = True,command = mto_Anim.creatWin, ann = 'Switch IK Anim Tool')
+
+        self.addSeparator()
 
 
 
