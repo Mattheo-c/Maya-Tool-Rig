@@ -9,11 +9,23 @@
 #- Florian Delarque for helping about the code.
 import maya.cmds as cmds 
 
+def creatwin(*agr) :
+     if cmds.window("Switch" ,widthHeight=(100, 400), exists =True):
+          cmds.deleteUI("Switch")
+    
+     cmds.window("Switch",widthHeight=(100, 400))
+ 
+     cmds.columnLayout(adjustableColumn=True)
+     cmds.button(l="Switch IK/FK Arm L", c=ArmL)
+     cmds.button(l="Switch IK/FK Arm R", c=ArmR) 
+
+     cmds.showWindow("Switch")
+
 
 bones=["SHOULDER","ELBOW","WRIST"]
 bonesFk =["ELBOW","WRIST"]
 
-def ArmL(*agr) :
+def ArmL(*arg) :
     cmds.select('IK_FK_SWITCH_REVERSEHAND_L')
     test = cmds.getAttr('.inputX')
 
@@ -28,7 +40,7 @@ def ArmL(*agr) :
           cmds.xform('CTRL_IK_'+names+'_L' ,ws=True,t=AXE)
           
 
-def ArmR(*agr) :
+def ArmR(*arg) :
     cmds.select('IK_FK_SWITCH_REVERSEHAND_R')
     test = cmds.getAttr('.inputX')
 
@@ -43,15 +55,4 @@ def ArmR(*agr) :
           cmds.xform('CTRL_IK_'+names+'_R' ,ws=True,t=AXE)
          
 
-def creatWin() :
-     if cmds.window("Switch" ,widthHeight=(100, 400), exists =True):
-          cmds.deleteUI("Switch")
-    
-     cmds.window("Switch",widthHeight=(100, 400))
- 
-     cmds.columnLayout(adjustableColumn=True)
-     cmds.button(l="Switch IK/FK Arm L", c = ArmL)
-     cmds.button(l="Switch IK/FK Arm R", c = ArmR) 
-
-     cmds.showWindow("Switch")
 

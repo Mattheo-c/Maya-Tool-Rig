@@ -11,6 +11,9 @@
 import maya.cmds as cmds
 import mto_makingmenu as menu  
 import importlib
+import mto_IK_FK as mto_IKFK
+import mto_AutoRigbipede as mto_auto
+import mto_switch_Anim as mto_Anim
 
 
 
@@ -33,7 +36,7 @@ class makingmenu() :
         cmds.menuItem(p=menu, l="Joint", rp="N", c="cmds.JointTool()",i="kinJoint.png")
         cmds.menuItem(p=menu, ob=1, c="cmds.JointToolOptions()")
 
-        subMenu2 = cmds.menuItem(p=menu, l="Strok", rp="SE", c="print 'Strok'", subMenu=1,i='stroke.svg')
+        subMenu2 = cmds.menuItem(p=menu, l="Tool", rp="SE", c="print 'Strok'", subMenu=1,i='stroke.svg')
         subMenu1 = cmds.menuItem(p=menu, l="IK", rp="NE", c="print 'IK", subMenu=1,i='ikEffector.svg')
         subMenu3 = cmds.menuItem(p=menu, l="Contraint", rp="E", c="print 'Auto_Rig", subMenu=1,i='advancedSettings.png')
         subMenu4 = cmds.menuItem(p=menu, l="Curve", rp="SW", c="print'Curve", subMenu=1,i='curveVarGroup.svg')
@@ -53,8 +56,9 @@ class makingmenu() :
         cmds.menuItem(p=subMenu1, ob=1, c="cmds.IKSplineHandleToolOptions()")
 
         #Sub Menu 2#
-        cmds.menuItem(p=subMenu2, l="Creat Strok",rp="SE", c="cmds.AttachBrushToCurves()",i='stroke.svg')
-        cmds.menuItem(p=subMenu2, l="Convert Poly",rp="E", c="cmds.PaintEffectsToPoly()",i='paintFXtoPoly.png')
+        cmds.menuItem(p=subMenu2, l="Switch Ik Fk Anim",rp="SE", c=mto_Anim.creatWin,i='paintFXtoPoly.png')
+        cmds.menuItem(p=subMenu2, l="Auto Rig",rp="E", c=mto_auto.CreatWin,i='paintFXtoPoly.png')
+        cmds.menuItem(p=subMenu2, l="Switch Ik Fk",rp="NE", c=mto_IKFK.creatwin,i='paintFXtoPoly.png')
 
         #Sub Menu 3#
         cmds.menuItem(p=subMenu3, l="Point",rp="E", c="cmds.PointConstraint()",i='pointConstraint.svg')
